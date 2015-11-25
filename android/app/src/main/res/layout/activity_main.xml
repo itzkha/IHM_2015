@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ch.heig_vd.pebble.activities.MainActivity">
+
+    <Switch
+        android:id="@+id/switch_enable_api"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/switch_enable_api" />
+
+    <LinearLayout
+        android:id="@+id/layout_pebble_communication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_enable_api"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/status_pebble" />
+
+        <TextView
+            android:id="@+id/pebble_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/off"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_location_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_pebble_communication"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/status_location" />
+
+        <TextView
+            android:id="@+id/location_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/off"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_location_service">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_location_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_location_api"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hint_location_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_location_api"
+                android:layout_marginBottom="20dp"
+                android:text="@string/hint_location_api" />
+
+            <TextView
+                android:id="@+id/title_elevation_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint_location_api"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_elevation_api"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hint_elevation_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_elevation_api"
+                android:layout_marginBottom="20dp"
+                android:text="@string/hint_elevation_api" />
+
+            <TextView
+                android:id="@+id/title_weather_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint_elevation_api"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_weather_api"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hint_weather_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_weather_api"
+                android:layout_marginBottom="20dp"
+                android:text="@string/hint_weather_api" />
+
+            <TextView
+                android:id="@+id/title_transport_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint_weather_api"
+                android:layout_marginBottom="10dp"
+                android:text="@string/title_transport_api"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hint_transport_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_transport_api"
+                android:layout_marginBottom="20dp"
+                android:text="@string/hint_transport_api" />
+
+            <Button
+                android:id="@+id/button_configure_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="configureTransport"
+                android:layout_below="@id/hint_transport_api"
+                android:layout_marginLeft="30dp"
+                android:text="@string/button_configure_transport"
+                android:layout_marginRight="30dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

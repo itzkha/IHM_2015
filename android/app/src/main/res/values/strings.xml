@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Pebble IHM</string>
+
+    <!-- UI's specific -->
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="pebble_name">Pebble</string>
+    <string name="no_pebble_paired">No Pebble paired !</string>
+    <string name="pebble_detected">Pebble detected :</string>
+    <string name="switch_enable_api">Enable API</string>
+    <string name="status_pebble">Pebble communication</string>
+    <string name="status_location">Location service</string>
+    <string name="title_location_api">Location API</string>
+    <string name="hint_location_api">Request id : 0\nReturns a PebbleDictionary with the current latitude (id : 100) and longitude (id : 101).\n\nRequest id : 1\nFix a location point for Requests 2 and 3.\n\nRequest id : 2\nStarts and returns a PebbleDictionary with the current distance (id : 102) and direction (id : 103) to the fixed point every 1 second.\n\nRequest id : 3\nStops the threads of Request 2.</string>
+    <string name="title_elevation_api">Elevation API</string>
+    <string name="hint_elevation_api">Request id : 4\nReturns a PebbleDictionary with the current altitude (id : 200).</string>
+    <string name="title_weather_api">Weather API</string>
+    <string name="hint_weather_api">Request id : 5\nReturns a PebbleDictionary with the current weather status (id : 300) and description (id : 301).\n\nRequest id : 6\nReturns a PebbleDictionary with the current temperature (id : 302).\n\nRequest id : 7\nReturns a PebbleDictionary with the current pressure (id : 303).\n\nRequest id : 8\nReturns a PebbleDictionary with the current humidity (id : 304).\n\nRequest id : 9\nReturns a PebbleDictionary with the current wind speed (id : 305) and direction (id : 306).\n\nRequest id : 10\nReturns a PebbleDictionary with the sunrise time (id : 307).\n\nRequest id : 11\nReturns a PebbleDictionary with the sunset time (id : 308).</string>
+    <string name="title_transport_api">Transport API</string>
+    <string name="hint_transport_api">Request id : 12\nReturns a PebbleDictionary with the next available Transport from your current location (departure id : 400, departure time id : 401), to Lausanne (arrival id : 402, arrival time id : 403) by default.\nYou can configure the arrival using the button bellow.</string>
+    <string name="button_configure_transport">Configure</string>
+
+    <!-- Dialog's specific -->
+    <string name="dialog_ok">OK</string>
+    <string name="bluetooth_error_title">Bluetooth Error</string>
+    <string name="bluetooth_error_not_detected">Bluetooth not detected on this device</string>
+    <string name="bluetooth_error_multiple_advertising_not_supported">BLE multiple advertising not supported on this device</string>
+    <string name="bluetooth_error_filtering_not_supported">BLE filtering not supported on this device</string>
+    <string name="bluetooth_error_scan_batching_not_supported">BLE scan batching not supported on this device</string>
+    <string name="pebble_not_paired">No Pebble device paired.</string>
+    <string name="gps_network_not_enabled">Location services are not enabled !\nPlease, enable location to use this application.</string>
+    <string name="open_location_settings">Open Location</string>
+    <string name="dialog_cancel">Cancel</string>
+</resources>
