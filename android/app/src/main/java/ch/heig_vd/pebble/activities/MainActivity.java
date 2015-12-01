@@ -86,6 +86,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        mSwitch = (Switch) findViewById(R.id.switch_enable_api);
+        mSwitch.setEnabled(false);
         configureUUID();
     }
 
@@ -125,10 +127,15 @@ public class MainActivity extends Activity {
                 if (uuid.isEmpty()) {
                     configureUUID();
                 } else {
-                    APP_UUID = UUID.fromString(uuid);
-                    editor.putString(PREFS_UUID, uuid);
-                    editor.apply();
-                    setupUI();
+                    try {
+                        APP_UUID = UUID.fromString(uuid);
+                        editor.putString(PREFS_UUID, uuid);
+                        editor.apply();
+                        setupUI();
+                    } catch (IllegalArgumentException e) {
+                        Utils.logAndToast(MainActivity.this, e.getMessage());
+                        configureUUID();
+                    }
                 }
             }
         });
@@ -156,7 +163,7 @@ public class MainActivity extends Activity {
     private void setupUI() {
         Utils.getBLEAdapter(this);
         Utils.checkLocation(this);
-        mSwitch = (Switch) findViewById(R.id.switch_enable_api);
+        mSwitch.setEnabled(true);
         mPebbleStatus = (TextView) findViewById(R.id.pebble_status);
         mLocationStatus = (TextView) findViewById(R.id.location_status);
         mButton = (Button) findViewById(R.id.button_configure_transport);
